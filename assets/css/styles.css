@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* =========================================================
+   ETHICA OPUS SITE — BLACK + ICON BULLETS (NO COPY CHANGES)
+   Rules:
+   - Dark premium background (from premium site vibe)
+   - Icon bullets instead of plain bullets (no HTML text changes)
+   - Rounded buttons ONLY; everything else sharp (no radius)
+   ========================================================= */
+
+:root{
+  /* Premium black system */
+  --bg: #050506;
+  --bg2:#0A0A0C;
+  --panel: rgba(255,255,255,.045);
+  --panel2: rgba(255,255,255,.065);
+
+  --cream:#e9e6df;
+  --cream2: rgba(233,230,223,.78);
+  --cream3: rgba(233,230,223,.62);
+
+  --line: rgba(255,255,255,.10);
+  --line2: rgba(255,255,255,.16);
+
+  /* Gold accents */
+  --gold:#c9a25b;
+  --gold2:#ead6a6;
+
+  /* Typography */
+  --display:"Cinzel", serif;
+  --sans:"Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  /* Layout */
+  --max: 1120px;
+
+  /* Geometry */
+  --radius: 0px; /* everything sharp by default */
+}
+
+/* Base */
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family: var(--sans);
+  color: var(--cream);
+  background: var(--bg);
+}
+
+.container{ max-width: var(--max); }
+
+/* Accessibility */
+.skip-link{
+  position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem; top:1rem; width:auto; height:auto;
+  padding:.75rem 1rem;
+  background:#fff;
+  color:#111;
+  border:1px solid rgba(0,0,0,.18);
+  z-index:9999;
+}
+
+/* =========================================================
+   NO BORDER RADIUS ANYWHERE (except buttons)
+   ========================================================= */
+*:not(.btn):not(.btn *){ border-radius: 0 !important; }
+
+/* Typography */
+.eyebrow{
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:600;
+  color: var(--cream3);
+}
+
+h1,h2,h3{
+  font-family: var(--display);
+  letter-spacing: .01em;
+}
+
+.hero-title{
+  font-weight: 800;
+  line-height: 1.03;
+  font-size: clamp(2.2rem, 4.2vw, 3.7rem);
+}
+
+.lead-tight{
+  font-size: 1.05rem;
+  color: var(--cream2);
+  max-width: 78ch;
+}
+
+.p-muted{ color: var(--cream2); }
+
+/* Sections + dividers */
+.section{ padding: clamp(3.25rem, 5vw, 5.5rem) 0; }
+.narrow{ max-width:78ch; }
+
+.hairline{
+  height:1px;
+  border:0;
+  margin:1.25rem 0;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+/* =========================================================
+   NAVBAR (premium black glass)
+   ========================================================= */
+.navbar{
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  transition: background .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.navbar.scrolled{
+  background: rgba(0,0,0,.82);
+  box-shadow: 0 14px 40px rgba(0,0,0,.45);
+  border-bottom-color: rgba(255,255,255,.12);
+}
+
+.nav-link{
+  font-size:.82rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:600;
+  color: rgba(233,230,223,.78) !important;
+}
+.nav-link:hover{ color: rgba(233,230,223,.95) !important; }
+.nav-link.active{ color: var(--gold2) !important; }
+
+/* Brand */
+.brand{ display:flex; align-items:center; gap:.4rem; }
+.brand-mark{
+  width:50px; height:50px;
+  background-image: url('./ethica-icon.svg');
+  background-size: 50px 50px;
+  display: inline-block;
+}
+.brand-name{
+  font-family:var(--display);
+  font-weight:840;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-size:1.3rem;
+  color:var(--gold);
+}
+.brand-sub{
+  display:block; margin-top:-6px;
+  font-size:.50rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#EEEEEE;
+}
+
+/* =========================================================
+   HERO (premium black + optional banner image)
+   - We DO NOT change hero text; styling only.
+   ========================================================= */
+.hero{
+  padding-top: 6.8rem;
+  padding-bottom: 3.8rem;
+  position: relative;
+  color: var(--cream);
+  background: linear-gradient(180deg, #000000 0%, #060607 55%, #0a0a0c 100%);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  overflow:hidden;
+}
+
+.hero::before{
+  /* Optional: if banner exists, it adds premium depth */
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.62) 35%, rgba(0,0,0,.45)),
+    url("../img/linkedin-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  pointer-events:none;
+}
+
+.hero::after{
+  content:"";
+  position:absolute; left:0; right:0; top:0;
+  height:2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity:.95;
+  pointer-events:none;
+}
+
+.hero > *{ position: relative; z-index: 1; }
+
+.hero-topline{
+  display:flex; flex-wrap:wrap;
+  gap:.75rem 1.25rem;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:1.4rem;
+}
+
+.hero-topline .left{
+  font-size:.82rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:600;
+  color: rgba(233,230,223,.82);
+}
+
+.hero-topline .right{
+  font-size:.82rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:700;
+  color: var(--gold2);
+}
+
+/* =========================================================
+   BUTTONS: ROUNDED ONLY HERE
+   ========================================================= */
+.btn-gold{
+  border-radius: 999px !important;
+  padding: .9rem 1.1rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.78rem;
+  color:#EEEEEE;
+  background: transparent;
+  border: 1px solid rgba(201,162,91,.55);
+  transition: transform .15s ease, filter .15s ease;
+}
+.btn-gold:hover{
+background: rgba(201,162,91,.55);
+}
+
+.btn-ink{
+  border-radius: 999px !important;
+  padding: .9rem 1.1rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.78rem;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.18);
+}
+.btn-ink:hover{ border-color: rgba(255,255,255,.30); }
+
+/* =========================================================
+   CARDS / PANELS (dark opus)
+   ========================================================= */
+.card-clean{
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.card-clean .card-body{ padding: 1.6rem; }
+
+.card-title{
+  font-family: var(--display);
+  font-weight: 800;
+  margin-bottom: .5rem;
+  color: var(--gold2);
+}
+
+/* KPI bits */
+.kpi{
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--gold2);
+}
+.kpi-label{
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  color: rgba(233,230,223,.62);
+}
+
+/* Quote */
+.quote{
+  padding: 1.6rem;
+  border-left: 2px solid rgba(201,162,91,.65);
+  background: linear-gradient(180deg, rgba(201,162,91,.10), rgba(0,0,0,0));
+}
+.quote p{ margin:0; color: rgba(233,230,223,.86); }
+.quote .who{ margin-top:.9rem; font-size:.86rem; color: rgba(233,230,223,.70); }
+
+/* =========================================================
+   ICON BULLETS (NO TEXT CHANGES)
+   - Converts existing .list-clean bullets into icon bullets
+   - Works without changing HTML lists
+   ========================================================= */
+.list-clean{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: rgba(233,230,223,.82);
+}
+.list-clean li{
+  position: relative;
+  padding-left: 1.75rem;
+  margin: .42rem 0;
+}
+.list-clean li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.40rem;
+  width: 16px;
+  height: 16px;
+  background-repeat:no-repeat;
+  background-size:16px 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20 6 9 17l-5-5' stroke='%23c9a25b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  opacity: .95;
+}
+
+/* If any pages use list-check already, keep it consistent */
+.list-check{ list-style:none; padding-left:0; margin:0; }
+.list-check li{
+  display:flex; gap:.75rem; align-items:flex-start;
+  padding:.42rem 0;
+}
+.tick{
+  width:18px; height:18px;
+  border: 1px solid rgba(201,162,91,.60);
+  background: rgba(201,162,91,.10);
+  display:grid; place-items:center;
+  margin-top:.18rem;
+  flex: 0 0 auto;
+}
+.tick svg{ width:14px; height:14px; color: var(--gold); }
+
+/* =========================================================
+   ACCORDION (dark)
+   ========================================================= */
+.accordion-item{
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.accordion-button{
+  background: transparent;
+  color: rgba(233,230,223,.90);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.accordion-button:not(.collapsed){
+  color: var(--gold2);
+  box-shadow:none;
+}
+.accordion-body{ color: rgba(233,230,223,.82); }
+
+/* Forms */
+.form-control, .form-select{
+  background: rgba(0,0,0,.25);
+  color: rgba(233,230,223,.90);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.form-control::placeholder{ color: rgba(233,230,223,.50); }
+.form-control:focus, .form-select:focus{
+  border-color: rgba(201,162,91,.60);
+  box-shadow: 0 0 0 .25rem rgba(201,162,91,.18);
+}
+
+/* Footer (premium black) */
+.footer{
+  background:#000;
+  border-top: 1px solid rgba(201,162,91,.20);
+}
+.footer a{ color: rgba(233,230,223,.74); text-decoration:none; }
+.footer a:hover{ color: var(--gold2); }
+
+@media (max-width: 992px){
+  .hero{ padding-top: 6.2rem; padding-bottom: 3.2rem; }
+}
