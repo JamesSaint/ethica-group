@@ -234,6 +234,7 @@ h1,h2,h3{
 }
 .btn-gold:hover{
 background: var(--gold2);
+color: #000000;
 }
 
 .btn-ink{
