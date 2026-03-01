@@ -145,7 +145,7 @@ h1,h2,h3{
   letter-spacing:.15em;
   text-transform:uppercase;
   font-size:1.3rem;
-  color:var(--gold);
+  color:var(--gold2);
 }
 .brand-sub{
   display:block; margin-top:-6px;
@@ -233,7 +233,7 @@ h1,h2,h3{
   transition: transform .15s ease, filter .15s ease;
 }
 .btn-gold:hover{
-background: rgba(201,162,91,.55);
+background: var(--gold2);
 }
 
 .btn-ink{
