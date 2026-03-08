@@ -1,22 +1,16 @@
-# Ethica Group Ltd
+# ethica-group
 
-Live-ready static site bundle.
+Live-ready static site bundle for Ethica Group Ltd.
 
-## Structure
+## Included
+- Production HTML pages
+- Shared CSS and JavaScript assets
+- Open Graph and Twitter metadata
+- Favicon set and web manifest
+- robots.txt and sitemap.xml
+- Branded preview images for social sharing
 
-- index.html
-- services.html
-- research.html
-- about.html
-- contact.html
-- assets/css/styles.css
-- assets/js/main.js
-- assets/img/Dr-Joanna-Michalska.jpg
-- assets/img/ethica-icon.svg
-- assets/img/og-image.jpg
-
-## Notes
-
-- Mobile navigation has been fixed and standardised across all pages.
-- The contact form is still in demo mode until a live form endpoint is added.
-- Upload the full folder contents to your web host or GitHub Pages.
+## Deploy
+Upload the contents of this folder to the root of your static host.
+Recommended base URL:
+https://jamessaint.github.io/ethica-group
