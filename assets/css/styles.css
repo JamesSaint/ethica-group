@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* =========================================================
-   ETHICA OPUS SITE — BLACK + ICON BULLETS (NO COPY CHANGES)
-   Rules:
-   - Dark premium background (from premium site vibe)
-   - Icon bullets instead of plain bullets (no HTML text changes)
-   - Rounded buttons ONLY; everything else sharp (no radius)
+   ETHICA GROUP CUSTOM STATIC SITE
    ========================================================= */
 
 :root{
@@ -238,7 +234,6 @@ h1,h2,h3{
 }
 
 .hero::before{
-  /* Optional: if banner exists, it adds premium depth */
   content:"";
   position:absolute; inset:0;
   background:
