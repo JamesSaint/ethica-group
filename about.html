@@ -22,11 +22,18 @@
       </span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<button class="navbar-toggler custom-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+  <span class="toggler-icon">
+    <span class="toggler-line"></span>
+  </span>
+</button>
 
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" data-nav href="services.html">Services</a></li>
@@ -142,11 +149,6 @@
       </div>
 
       <hr class="hairline"/>
-
-      <div class="quote">
-        <div class="who">Why this matters</div>
-        <p>The redesign of authority is not a future concern. It is a present responsibility.</p>
-      </div>
     </div>
   </section>
 </main>
@@ -168,7 +170,7 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div style="color:rgba(18,19,22,.55)">© <span id="year"></span> Ethica Group Ltd</div>
+      <div class="copyright">© <span id="year"></span> Ethica Group Ltd</div>
     </div>
   </div>
 </footer>
