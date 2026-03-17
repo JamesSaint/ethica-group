@@ -1,6 +1,6 @@
 # ethica-group
 
-Live-ready static site bundle for Ethica Group Ltd.
+Live-ready static site for Ethica Group Ltd.
 
 ## Included
 - Production HTML pages
@@ -9,8 +9,3 @@ Live-ready static site bundle for Ethica Group Ltd.
 - Favicon set and web manifest
 - robots.txt and sitemap.xml
 - Branded preview images for social sharing
-
-## Deploy
-Upload the contents of this folder to the root of your static host.
-Recommended base URL:
-https://jamessaint.github.io/ethica-group
